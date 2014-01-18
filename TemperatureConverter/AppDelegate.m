@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TemperatureConverterViewController.h"
 
 @implementation AppDelegate
 
@@ -14,6 +15,11 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    TemperatureConverterViewController *tvc = [[TemperatureConverterViewController alloc] init];
+    UINavigationController *unc = [[UINavigationController alloc] initWithRootViewController:tvc];
+    
+    self.window.rootViewController = unc;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
